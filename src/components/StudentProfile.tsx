@@ -11,7 +11,7 @@ const StudentProfile = () => {
           </div>
           <div>
             <h3 className="text-xl font-semibold">Иванов Иван</h3>
-            <p className="text-sm text-gray-600">11 "А" класс</p>
+            <p className="text-sm text-gray-600">3 курс</p>
           </div>
         </CardTitle>
       </CardHeader>

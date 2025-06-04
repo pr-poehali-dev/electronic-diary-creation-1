@@ -64,6 +64,12 @@ const AcademicStats = () => {
             <span className="text-2xl font-bold text-green-600">4.5</span>
           </div>
         </div>
+        <div className="mt-4 p-4 bg-blue-50 rounded-lg">
+          <div className="flex justify-between items-center">
+            <span className="text-sm font-medium">Куратор группы:</span>
+            <span className="text-sm">Петрова А.С.</span>
+          </div>
+        </div>
       </CardContent>
     </Card>
   );

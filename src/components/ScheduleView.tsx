@@ -6,57 +6,50 @@ const ScheduleView = () => {
     {
       time: "8:00-8:45",
       subject: "Математика",
-      teacher: "Смирнова И.П.",
       room: "205",
-      type: "урок",
+      type: "пара",
     },
     {
       time: "8:55-9:40",
-      subject: "Русский язык",
-      teacher: "Козлова А.А.",
+      subject: "Физика",
       room: "301",
-      type: "урок",
+      type: "пара",
     },
     {
       time: "9:50-10:35",
-      subject: "Физика",
-      teacher: "Петров В.С.",
+      subject: "Техническая механика",
       room: "107",
-      type: "урок",
+      type: "пара",
     },
     {
       time: "10:55-11:40",
-      subject: "История",
-      teacher: "Иванова М.Н.",
+      subject: "Материаловедение",
       room: "212",
-      type: "урок",
+      type: "пара",
     },
     {
       time: "11:50-12:35",
-      subject: "Химия",
-      teacher: "Сидорова Е.В.",
+      subject: "Аэродинамика",
       room: "304",
-      type: "урок",
+      type: "пара",
     },
     {
       time: "12:45-13:30",
       subject: "Обед",
-      teacher: "",
       room: "Столовая",
       type: "перерыв",
     },
     {
       time: "13:30-14:15",
-      subject: "Литература",
-      teacher: "Козлова А.А.",
+      subject: "Английский язык",
       room: "301",
-      type: "урок",
+      type: "пара",
     },
   ];
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case "урок":
+      case "пара":
         return "default";
       case "перерыв":
         return "secondary";
@@ -114,9 +107,6 @@ const ScheduleView = () => {
                 )}
               </div>
               <h4 className="font-semibold text-lg">{lesson.subject}</h4>
-              {lesson.teacher && (
-                <p className="text-gray-600 text-sm">{lesson.teacher}</p>
-              )}
             </div>
           ))}
         </div>
