@@ -30,24 +30,28 @@ const AcademicStats = () => {
   };
 
   return (
-    <Card>
+    <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-xl">
       <CardHeader>
-        <CardTitle>Академическая успеваемость</CardTitle>
+        <CardTitle className="text-2xl font-bold text-gray-800 flex items-center gap-3">
+          📚 Академическая успеваемость
+        </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="grid gap-3">
+        <div className="grid gap-4">
           {subjects.map((subject, index) => (
             <div
               key={index}
-              className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+              className="flex items-center justify-between p-4 bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl border border-gray-100 hover:shadow-md transition-all duration-200"
             >
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-4">
                 <div
-                  className={`w-8 h-8 rounded-full ${getGradeColor(subject.grade)} flex items-center justify-center text-white font-bold text-sm`}
+                  className={`w-12 h-12 rounded-xl ${getGradeColor(subject.grade)} flex items-center justify-center text-white font-bold text-lg shadow-lg`}
                 >
                   {subject.grade}
                 </div>
-                <span className="font-medium">{subject.name}</span>
+                <span className="font-semibold text-gray-800">
+                  {subject.name}
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-lg">{getTrendIcon(subject.trend)}</span>

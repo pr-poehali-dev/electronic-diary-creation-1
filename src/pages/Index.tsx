@@ -4,46 +4,60 @@ import AcademicStats from "@/components/AcademicStats";
 import BonusSystem from "@/components/BonusSystem";
 import FreeLunchSystem from "@/components/FreeLunchSystem";
 import ScheduleView from "@/components/ScheduleView";
+import AuthHeader from "@/components/AuthHeader";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      <AuthHeader />
+
       <div className="container mx-auto px-4 py-8">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">
-            Электронный дневник - Аэрокосмический колледж СибГУ
+        <div className="mb-8 text-center">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+            Электронный дневник
           </h1>
-          <p className="text-gray-600">
-            Добро пожаловать в современную систему образования колледжа
+          <p className="text-xl text-gray-600 mb-2">
+            Аэрокосмический колледж СибГУ
+          </p>
+          <p className="text-gray-500">
+            Современная цифровая образовательная платформа
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-8">
           <div className="lg:col-span-1">
             <StudentProfile />
           </div>
           <div className="lg:col-span-3">
             <Tabs defaultValue="dashboard" className="w-full">
-              <TabsList className="grid w-full grid-cols-4">
-                <TabsTrigger value="dashboard">📊 Дашборд</TabsTrigger>
-                <TabsTrigger value="bonus">🎯 Бонусы</TabsTrigger>
-                <TabsTrigger value="lunch">🍽️ Питание</TabsTrigger>
-                <TabsTrigger value="schedule">📅 Расписание</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-4 bg-white/60 backdrop-blur-sm">
+                <TabsTrigger value="dashboard" className="gap-2">
+                  📊 Дашборд
+                </TabsTrigger>
+                <TabsTrigger value="bonus" className="gap-2">
+                  🎯 Бонусы
+                </TabsTrigger>
+                <TabsTrigger value="lunch" className="gap-2">
+                  🍽️ Питание
+                </TabsTrigger>
+                <TabsTrigger value="schedule" className="gap-2">
+                  📅 Расписание
+                </TabsTrigger>
               </TabsList>
 
-              <TabsContent value="dashboard" className="space-y-6">
+              <TabsContent value="dashboard" className="space-y-6 mt-6">
                 <AcademicStats />
               </TabsContent>
 
-              <TabsContent value="bonus" className="space-y-6">
+              <TabsContent value="bonus" className="space-y-6 mt-6">
                 <BonusSystem />
               </TabsContent>
 
-              <TabsContent value="lunch" className="space-y-6">
+              <TabsContent value="lunch" className="space-y-6 mt-6">
                 <FreeLunchSystem />
               </TabsContent>
 
-              <TabsContent value="schedule" className="space-y-6">
+              <TabsContent value="schedule" className="space-y-6 mt-6">
                 <ScheduleView />
               </TabsContent>
             </Tabs>
